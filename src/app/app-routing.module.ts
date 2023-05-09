@@ -14,11 +14,30 @@ import { ListForumFrontComponent } from './frontOffice/forum/list-forum-front/li
 import { AddPostFrontComponent } from './frontOffice/forum/add-post-front/add-post-front.component';
 import { PostDetailsComponent } from './frontOffice/forum/post-details/post-details.component';
 import { UpdatePostComponent } from './frontOffice/forum/update-post/update-post.component';
+import { ProductsComponent } from './frontOffice/shop/products/products.component';
+import { DetailsproductComponent } from './frontOffice/shop/detailsproduct/detailsproduct.component';
+import { RecommandedproductsComponent } from './frontOffice/shop/recommandedproducts/recommandedproducts.component';
+import { ListeFavorisComponent } from './frontOffice/shop/liste-favoris/liste-favoris.component';
+import { AddproductComponent } from './backOffice/shopAdmin/addproduct/addproduct.component';
+import { ModifyproductComponent } from './backOffice/shopAdmin/modifyproduct/modifyproduct.component';
+import { ListproductsComponent } from './backOffice/shopAdmin/listproducts/listproducts.component';
 
 const routes: Routes = [{
   path:'admin',
   component:AllTemplateAdminComponent,
   children:[
+    {
+      path:'addproduct',
+      component:AddproductComponent
+    },
+    {
+      path:'modifyproduct/:id',
+      component:ModifyproductComponent
+    },
+    {
+      path:'listproducts',
+      component:ListproductsComponent
+    },
     {
       path:'admin',
       component:BodyAdminComponent
@@ -68,6 +87,23 @@ const routes: Routes = [{
   path:'front',
   component: AllTemplateUserComponent,
   children:[
+    {
+      path:'shop',
+      component: ProductsComponent
+    },
+    {
+       path:'detailproduct/:id',
+      component: DetailsproductComponent
+    },
+    {
+      path:'recommandedproducts',
+     component: RecommandedproductsComponent
+   },
+   {
+    path:'listefavoris',
+   component: ListeFavorisComponent
+ }
+    ,
     {
       path:'profile',
       component: UpdateuserComponent

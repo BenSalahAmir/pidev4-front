@@ -26,6 +26,15 @@ import { ListForumFrontComponent } from './frontOffice/forum/list-forum-front/li
 import { PostDetailsComponent } from './frontOffice/forum/post-details/post-details.component';
 import { UpdatePostComponent } from './frontOffice/forum/update-post/update-post.component';
 import { FilterComponent } from './frontOffice/forum/filter/filter.component';
+import { ProductsComponent } from './frontOffice/shop/products/products.component';
+import { AddproductComponent } from './backOffice/shopAdmin/addproduct/addproduct.component';
+import { ModifyproductComponent } from './backOffice/shopAdmin/modifyproduct/modifyproduct.component';
+import { ListproductsComponent } from './backOffice/shopAdmin/listproducts/listproducts.component';
+import { DetailsproductComponent } from './frontOffice/shop/detailsproduct/detailsproduct.component';
+import { RecommandedproductsComponent } from './frontOffice/shop/recommandedproducts/recommandedproducts.component';
+import { QrCodeServiceComponent } from './frontOffice/shop/qr-code-service/qr-code-service.component';
+import { ListeFavorisComponent } from './frontOffice/shop/liste-favoris/liste-favoris.component';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 @NgModule({
   declarations: [
@@ -50,14 +59,23 @@ import { FilterComponent } from './frontOffice/forum/filter/filter.component';
     ListForumFrontComponent,
     PostDetailsComponent,
     UpdatePostComponent,
-    FilterComponent
+    FilterComponent,
+    ProductsComponent,
+    AddproductComponent,
+    ModifyproductComponent,
+    ListproductsComponent,
+    DetailsproductComponent,
+    RecommandedproductsComponent,
+    QrCodeServiceComponent,
+    ListeFavorisComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgxPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent]
