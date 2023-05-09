@@ -10,7 +10,10 @@ import { ListuserComponent } from './backOffice/user/listuser/listuser.component
 import { AdduserComponent } from './frontOffice/user/adduser/adduser.component';
 import { LoginComponent } from './frontOffice/user/login/login.component';
 import { UpdateuserComponent } from './frontOffice/user/updateuser/updateuser.component';
-import { LoginhazemComponent } from './loginhazem/loginhazem.component';
+import { ListForumFrontComponent } from './frontOffice/forum/list-forum-front/list-forum-front.component';
+import { AddPostFrontComponent } from './frontOffice/forum/add-post-front/add-post-front.component';
+import { PostDetailsComponent } from './frontOffice/forum/post-details/post-details.component';
+import { UpdatePostComponent } from './frontOffice/forum/update-post/update-post.component';
 
 const routes: Routes = [{
   path:'admin',
@@ -48,10 +51,7 @@ const routes: Routes = [{
   path:'signup',
   component: AdduserComponent
 },
-{
-  path:'loginhazem',
-  component: LoginhazemComponent
-},
+
 {
   path:'signin',
   component: LoginComponent
@@ -71,7 +71,24 @@ const routes: Routes = [{
     {
       path:'profile',
       component: UpdateuserComponent
+    },
+    {
+      path:'listforum',
+      component:ListForumFrontComponent
+    },
+    {
+      path:'addpost',
+      component:AddPostFrontComponent
+    },
+    {
+      path:'detailpost/:id',
+      component: PostDetailsComponent
+    },
+    {
+      path:'edit/:id',
+      component: UpdatePostComponent
     }
+
     
   ]
 },

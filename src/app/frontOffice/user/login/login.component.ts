@@ -25,14 +25,6 @@ export class LoginComponent {
 
     const roleuser=this.yourService.getRoleFromToken();
     console.log('User role:', roleuser);
-
-    //this.userRole = this.yourService.getRolesUserFromToken(); // Call the method to get the user's role
-    console.log('User role:', this.userRole);
-    console.log("Checking token for role...");
-   
-    
-
-
   }
 
   // onSubmit() {

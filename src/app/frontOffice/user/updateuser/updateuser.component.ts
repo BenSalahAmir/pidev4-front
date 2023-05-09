@@ -21,13 +21,7 @@ export class UpdateuserComponent implements OnInit{
 
   constructor(private service: UsersServiceService , private ac:ActivatedRoute,private router :Router ) { }
   ngOnInit() {
-    // // get user id from storage
-    // this.userId = localStorage.getItem('userId');
 
-    // // fetch user profile data
-    // this.service.getUser(this.userId).subscribe(data => {
-    //   this.user = data;
-    // });
 
     const userId = this.service.getUserIdFromToken();
     console.log('User id:', userId);
