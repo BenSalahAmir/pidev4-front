@@ -1,0 +1,43 @@
+<section role="main" class="content-body card-margin" style="width: 2400px;">
+  <div class="row">
+    <div class="col-lg-6">
+      <section class="card">
+        <header class="card-header">
+          <div class="card-actions">
+            <a href="#" class="card-action card-action-toggle" data-card-toggle></a>
+            <a href="#" class="card-action card-action-dismiss" data-card-dismiss></a>
+          </div>
+          <h2 class="card-title">Liste products pending</h2>
+        </header>
+        <div class="card-body">
+          <table class="table table-responsive-md mb-0">
+            <thead>
+              <tr>
+                <th>idProduct</th>
+                <th>priceProduct</th>
+                <th>nameProduct</th>
+                <th>Quantity:</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="active" *ngFor="let product of products">
+                <td>{{product.idProduct}}</td>
+                <td>{{product.priceProduct}}</td>
+                <td>{{product.nameProduct}}</td>
+                <td>{{product.qttordered }}</td>
+                <td>
+                  <button class="btn btn-danger" (click)="deleteProductFromCart(product.idCart, product.idProduct, userId)">Delete</button>
+                </td>
+                
+              </tr>
+                           
+            </tbody>
+          </table>
+          <div>
+            <h1>Total: {{ total }}</h1>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</section>

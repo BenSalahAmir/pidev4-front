@@ -1,0 +1,34 @@
+<!-- add-discount-form.component.html -->
+<h1>Add Discount</h1>
+<form (submit)="addDiscount()">
+  <div>
+    <label for="discountCode">Discount Code</label>
+    <input type="text" id="discountCode" [(ngModel)]="newDiscount.discountCode" name="discountCode" required>
+  </div>
+
+  <div>
+    <label for="expiryDate">Expiry Date</label>
+    <input type="date" id="expiryDate" [(ngModel)]="newDiscount.expiryDate" name="expiryDate" required>
+  </div>
+
+  <div>
+    <label for="amount">Amount</label>
+    <input type="number" id="amount" [(ngModel)]="newDiscount.amount" name="amount" required>
+  </div>
+
+  <div>
+    <label for="percentage">Percentage</label>
+    <input type="checkbox" id="percentage" [(ngModel)]="newDiscount.percentage" name="percentage">
+  </div>
+  <div>
+    <label for="status">Status</label>
+    <select id="status" [(ngModel)]="newDiscount.discountStatus" name="status">
+      <option value="EXPIRED">Expired</option>
+      <option value="VALID">Valid</option>
+    </select>
+  </div>
+
+  <!-- Add other form fields as needed -->
+
+  <button type="submit" >Submit</button>
+</form>

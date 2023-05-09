@@ -1,0 +1,14 @@
+.cart_icon{
+    position:relative;
+    cursor:pointer;
+    line-height: 7;
+}
+
+.cart_icon:focus{
+    outline:none;
+    border:none;
+}
+
+.cart_iconi{
+    font-size:21px;
+}

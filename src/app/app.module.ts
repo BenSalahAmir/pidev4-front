@@ -47,6 +47,12 @@ import { DetailclaimComponent } from './backOffice/Claim/detailclaim/detailclaim
 import { DeleteClaimComponent } from './backOffice/Claim/delete-claim/delete-claim.component';
 import { UpdatefactureamComponent } from './updatefactuream/updatefactuream.component';
 import { ToastrModule } from 'ngx-toastr';
+import { UpdateDiscountComponent } from './update-discount/update-discount.component';
+import { AddDiscountFormComponent } from './add-discount-form/add-discount-form.component';
+import { ListdiscountComponent } from './listdiscount/listdiscount.component';
+import { ListcartpendingComponent } from './listcartpending/listcartpending.component';
+import { CartComponent } from './backOffice/cart/cart/cart.component';
+import { ListcartComponent } from './backOffice/cart/listcart/listcart.component';
 
 @NgModule({
   declarations: [
@@ -90,7 +96,13 @@ import { ToastrModule } from 'ngx-toastr';
     DetailclaimComponent,
     DeleteClaimComponent,
     UpdatefactureamComponent,
-    AddClaimComponent
+    AddClaimComponent,
+    CartComponent,
+     ListcartComponent,
+    ListcartpendingComponent,
+    ListdiscountComponent,
+    AddDiscountFormComponent,
+    UpdateDiscountComponent
   ],
   imports: [
     BrowserAnimationsModule,

@@ -29,11 +29,29 @@ import { UpdateClaimComponent } from './backOffice/Claim/update-claim/update-cla
 import { DeleteClaimComponent } from './backOffice/Claim/delete-claim/delete-claim.component';
 import { AddClaimComponent } from './backOffice/Claim/add-claim/add-claim.component';
 import { ListClaimComponent } from './backOffice/Claim/list-claim/list-claim.component';
+import { UpdateDiscountComponent } from './update-discount/update-discount.component';
+import { AddDiscountFormComponent } from './add-discount-form/add-discount-form.component';
+import { ListdiscountComponent } from './listdiscount/listdiscount.component';
+import { ListcartComponent } from './backOffice/cart/listcart/listcart.component';
+import { CartComponent } from './backOffice/cart/cart/cart.component';
+import { ListcartpendingComponent } from './listcartpending/listcartpending.component';
 
 const routes: Routes = [{
   path:'admin',
   component:AllTemplateAdminComponent,
   children:[
+    {
+      path:'listcart',
+      component:ListcartComponent
+    },
+    {
+      path:'listdiscount',
+      component:ListdiscountComponent
+    },
+    { path: 'add-discount', 
+    component: AddDiscountFormComponent },
+    { path: 'update-discount/:id', 
+    component: UpdateDiscountComponent },
     {
       path:'Listclaim',
       component:ListClaimComponent
@@ -133,6 +151,14 @@ const routes: Routes = [{
   path:'front',
   component: AllTemplateUserComponent,
   children:[
+    {
+      path:'cart',
+      component:CartComponent
+    },
+    {
+      path:'Listcartpending',
+      component:ListcartpendingComponent
+    },
     {
       path:'shop',
       component: ProductsComponent
