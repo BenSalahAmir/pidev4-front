@@ -35,6 +35,7 @@ import { ListdiscountComponent } from './listdiscount/listdiscount.component';
 import { ListcartComponent } from './backOffice/cart/listcart/listcart.component';
 import { CartComponent } from './backOffice/cart/cart/cart.component';
 import { ListcartpendingComponent } from './listcartpending/listcartpending.component';
+import { ModifDeliveryComponent } from './backOffice/modif-delivery/modif-delivery.component';
 
 const routes: Routes = [{
   path:'admin',
@@ -117,6 +118,10 @@ const routes: Routes = [{
     {
       path:'deliverys',
       component:DeliverysComponent
+    },
+    {
+      path:'modifDelivery/:id',
+      component:ModifDeliveryComponent
     },
     {
       path:'listeusers',

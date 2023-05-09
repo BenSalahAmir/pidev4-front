@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { DeliveryService } from 'src/app/Service/Delivery/delivery.service';
+import { Route, Router } from '@angular/router';
+import { DeliveryService } from 'src/app/delivery.service';
 
 @Component({
   selector: 'app-deliverys',
@@ -9,11 +10,45 @@ import { DeliveryService } from 'src/app/Service/Delivery/delivery.service';
 export class DeliverysComponent implements OnInit{
 
   deliverys!:any[];
-  constructor(private service:DeliveryService){}
+  idDelivery!:number;
+  constructor(private service:DeliveryService,private router:Router){}
 
   ngOnInit(): void {
       this.service.getDeliverys().subscribe(res => {
         console.log(res)
         this.deliverys=res})
   }
+
+  deleteDelivery(id:any){
+    console.log(id)
+    this.service.DeleteDelivery(id).subscribe();
+    window.location.reload()
+  }
+  //assignDeliveryToDriver(id:any){
+  // this.service.assignDeliveryToDriver(id).subscribe(() => {
+ // console.log('Delivery assigned to driver successfully');
+//});
+ // }
+
+ assignDeliveryToDeliveryMan(idDelivery: number) {
+  this.service.assignDeliveryToDeliveryMan(idDelivery).subscribe(
+    response => {
+      console.log(response);
+    },
+    error => {
+      console.log(error);
+    }
+  );
+}
+assignDeliveryToBestShippingCompany(delivery:any){
+  this.service.assignDeliveryToBestShippingCompany(delivery).subscribe(
+    response => {
+      console.log(response);
+    },
+    error => {
+      console.log(error);
+    }
+  );
+}
+
 }

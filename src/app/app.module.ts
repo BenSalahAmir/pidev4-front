@@ -53,6 +53,7 @@ import { ListdiscountComponent } from './listdiscount/listdiscount.component';
 import { ListcartpendingComponent } from './listcartpending/listcartpending.component';
 import { CartComponent } from './backOffice/cart/cart/cart.component';
 import { ListcartComponent } from './backOffice/cart/listcart/listcart.component';
+import { ModifDeliveryComponent } from './backOffice/modif-delivery/modif-delivery.component';
 
 @NgModule({
   declarations: [
@@ -102,7 +103,11 @@ import { ListcartComponent } from './backOffice/cart/listcart/listcart.component
     ListcartpendingComponent,
     ListdiscountComponent,
     AddDiscountFormComponent,
-    UpdateDiscountComponent
+    UpdateDiscountComponent,
+    AddDeliveryComponent,
+    DeliverysmenComponent,
+    DeliverysComponent,
+    ModifDeliveryComponent,
   ],
   imports: [
     BrowserAnimationsModule,
