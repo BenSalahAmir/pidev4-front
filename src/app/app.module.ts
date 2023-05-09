@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -35,6 +36,17 @@ import { RecommandedproductsComponent } from './frontOffice/shop/recommandedprod
 import { QrCodeServiceComponent } from './frontOffice/shop/qr-code-service/qr-code-service.component';
 import { ListeFavorisComponent } from './frontOffice/shop/liste-favoris/liste-favoris.component';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { ListebillComponent } from './backOffice/bill/listebill/listebill.component';
+import { AddbillComponent } from './backOffice/bill/addbill/addbill.component';
+import { UpdatebillComponent } from './backOffice/bill/updatebill/updatebill.component';
+import { DetailsbillComponent } from './backOffice/bill/detailsbill/detailsbill.component';
+import { AddClaimComponent } from './backOffice/Claim/add-claim/add-claim.component';
+import { UpdateClaimComponent } from './backOffice/Claim/update-claim/update-claim.component';
+import { ListClaimComponent } from './backOffice/Claim/list-claim/list-claim.component';
+import { DetailclaimComponent } from './backOffice/Claim/detailclaim/detailclaim.component';
+import { DeleteClaimComponent } from './backOffice/Claim/delete-claim/delete-claim.component';
+import { UpdatefactureamComponent } from './updatefactuream/updatefactuream.component';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -68,8 +80,21 @@ import { NgxPaginationModule } from 'ngx-pagination';
     RecommandedproductsComponent,
     QrCodeServiceComponent,
     ListeFavorisComponent,
+    ListebillComponent,
+    AddbillComponent,
+    UpdatebillComponent,
+    DetailsbillComponent,
+    AddClaimComponent,
+    UpdateClaimComponent,
+    ListClaimComponent,
+    DetailclaimComponent,
+    DeleteClaimComponent,
+    UpdatefactureamComponent,
+    AddClaimComponent
   ],
   imports: [
+    BrowserAnimationsModule,
+    ToastrModule.forRoot(),
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,

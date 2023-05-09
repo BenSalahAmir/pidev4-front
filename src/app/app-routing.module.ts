@@ -21,11 +21,57 @@ import { ListeFavorisComponent } from './frontOffice/shop/liste-favoris/liste-fa
 import { AddproductComponent } from './backOffice/shopAdmin/addproduct/addproduct.component';
 import { ModifyproductComponent } from './backOffice/shopAdmin/modifyproduct/modifyproduct.component';
 import { ListproductsComponent } from './backOffice/shopAdmin/listproducts/listproducts.component';
+import { DetailsbillComponent } from './backOffice/bill/detailsbill/detailsbill.component';
+import { UpdatebillComponent } from './backOffice/bill/updatebill/updatebill.component';
+import { AddbillComponent } from './backOffice/bill/addbill/addbill.component';
+import { ListebillComponent } from './backOffice/bill/listebill/listebill.component';
+import { UpdateClaimComponent } from './backOffice/Claim/update-claim/update-claim.component';
+import { DeleteClaimComponent } from './backOffice/Claim/delete-claim/delete-claim.component';
+import { AddClaimComponent } from './backOffice/Claim/add-claim/add-claim.component';
+import { ListClaimComponent } from './backOffice/Claim/list-claim/list-claim.component';
 
 const routes: Routes = [{
   path:'admin',
   component:AllTemplateAdminComponent,
   children:[
+    {
+      path:'Listclaim',
+      component:ListClaimComponent
+    },
+  
+    {
+      path:'addclaim',
+      component:AddClaimComponent
+    },
+  
+  
+      {
+        path:'DeleteClaimComponent',
+        component:DeleteClaimComponent
+      },
+      {
+        path:'Updateclaim',
+        component:UpdateClaimComponent
+      },
+  
+      {
+        path:'listbill',
+        component:ListebillComponent
+      },
+      {
+        path:'addbill',
+        component:AddbillComponent
+      },
+      {
+        path:'updatebill/:id',
+        component:UpdatebillComponent
+      },
+      {
+        path:'detailbill/:id',
+       component: DetailsbillComponent
+     }
+,  
+    
     {
       path:'addproduct',
       component:AddproductComponent
